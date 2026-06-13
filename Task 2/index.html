@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Learn Hub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    line-height:1.6;
+}
+
+/* ===================
+   Navigation
+=================== */
+
+nav{
+    background:#31406c;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#ffd700;
+}
+
+/* ===================
+   Hero Section
+=================== */
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600")
+    center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    color:white;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.1rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ffd700;
+    color:#1e3a8a;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:5px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* ===================
+   Courses Section
+=================== */
+
+.courses{
+    padding:70px 8%;
+    text-align:center;
+}
+
+.courses h2{
+    color:#1e3a8a;
+    margin-bottom:40px;
+    font-size:2.2rem;
+}
+
+.course-container{
+    display:flex;
+    gap:25px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.course-card{
+    background:white;
+    width:300px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+}
+
+.course-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.course-card h3{
+    color:#1e3a8a;
+    margin:15px 0;
+}
+
+.course-card p{
+    padding:0 15px 20px;
+    color:#555;
+}
+
+/* ===================
+   Statistics Section
+=================== */
+
+.stats{
+    background:#31406c;
+    color:white;
+    padding:60px 8%;
+
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    text-align:center;
+    gap:30px;
+}
+
+.stat h2{
+    font-size:2.5rem;
+}
+
+.stat p{
+    margin-top:10px;
+}
+
+/* ===================
+   Why Choose Us
+=================== */
+
+.features{
+    padding:70px 8%;
+    text-align:center;
+}
+
+.features h2{
+    color:#1e3a8a;
+    margin-bottom:40px;
+}
+
+.feature-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.feature{
+    background:white;
+    width:300px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature h3{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+/* ===================
+   Footer
+=================== */
+
+footer{
+    background:#31406c;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===================
+   Tablet View
+=================== */
+
+@media (max-width:768px){
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+}
+
+/* ===================
+   Mobile View
+=================== */
+
+@media (max-width:600px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+
+    .hero{
+        height:70vh;
+    }
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    .hero-content p{
+        font-size:0.95rem;
+    }
+
+    .course-card,
+    .feature{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+
+<nav>
+    <div class="logo">E-Learn Hub</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Instructors</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Learn New Skills Anytime, Anywhere</h1>
+
+        <p>
+            Access high-quality online courses from expert instructors.
+            Learn Web Development, Graphic Design, Programming,
+            Digital Marketing, and much more at your own pace.
+        </p>
+
+        <a href="#" class="btn">Explore Courses</a>
+    </div>
+</section>
+
+<!-- Courses Section -->
+
+<section class="courses">
+
+    <h2>Popular Courses</h2>
+
+    <div class="course-container">
+
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" alt="Web Development">
+            <h3>Web Development</h3>
+            <p>
+                Learn HTML, CSS, JavaScript and modern frameworks
+                to build responsive websites.
+            </p>
+        </div>
+
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600" alt="Graphic Design">
+            <h3>Graphic Design</h3>
+            <p>
+                Master Canva, Photoshop, branding, and UI/UX
+                design fundamentals.
+            </p>
+        </div>
+
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600" alt="Programming">
+            <h3>Programming</h3>
+            <p>
+                Build coding skills with C++, Python, Java,
+                and software development concepts.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>10K+</h2>
+        <p>Students</p>
+    </div>
+
+    <div class="stat">
+        <h2>250+</h2>
+        <p>Courses</p>
+    </div>
+
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Instructors</p>
+    </div>
+
+    <div class="stat">
+        <h2>95%</h2>
+        <p>Success Rate</p>
+    </div>
+
+</section>
+
+<!-- Features -->
+
+<section class="features">
+
+    <h2>Why Choose Us?</h2>
+
+    <div class="feature-container">
+
+        <div class="feature">
+            <h3>Expert Teachers</h3>
+            <p>
+                Learn from experienced professionals and industry experts.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h3>Flexible Learning</h3>
+            <p>
+                Study anytime and anywhere according to your schedule.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h3>Certificates</h3>
+            <p>
+                Earn certificates after completing courses and boost your career.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    <p>&copy; 2026 E-Learn Hub | Learn Without Limits</p>
+</footer>
+
+</body>
+</html>
